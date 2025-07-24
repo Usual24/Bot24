@@ -1,1 +1,43 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
 
+android {
+    namespace 'com.example.mykakaoapp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.mykakaoapp"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            // 디버그 빌드에 특별한 서명 설정 필요 없음
+        }
+        release {
+            // 실서비스용 릴리즈 빌드 시 keystore 설정 필요 (생략)
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.12.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+}
