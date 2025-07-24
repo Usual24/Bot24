@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.mykakaoapp'
+    namespace 'com.usual.bot24'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.mykakaoapp"
+        applicationId "com.usual.bot24"
         minSdk 21
         targetSdk 34
         versionCode 1
@@ -16,11 +16,8 @@ android {
     }
 
     buildTypes {
-        debug {
-            // 디버그 빌드에 특별한 서명 설정 필요 없음
-        }
+        debug {}
         release {
-            // 실서비스용 릴리즈 빌드 시 keystore 설정 필요 (생략)
             minifyEnabled false
         }
     }
