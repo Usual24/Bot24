@@ -35,7 +35,7 @@ class KakaoNotificationListener : NotificationListenerService() {
         val body = json.toString().toRequestBody(mediaType)
 
         val request = Request.Builder()
-            .url("http://<FLASK_SERVER_IP>:5000/kakao")
+            .url("http://192.168.0.5:5000/kakao")
             .post(body)
             .build()
 
